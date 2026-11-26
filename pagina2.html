@@ -4,179 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio - Información</title>
-  <style>
-    :root {
-      --bg-primary: #0f172a;
-      --bg-card: #1e293b;
-      --accent: #38bdf8;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-primary);
-      color: var(--text-main);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: var(--bg-card);
-      padding: 1.2rem 2rem;
-      border-bottom: 2px solid var(--accent);
-    }
-
-    .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: var(--accent);
-      letter-spacing: 1px;
-    }
-
-    main {
-      flex: 1;
-      max-width: 1100px;
-      margin: auto;
-      padding: 30px 20px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    /* ESTRICTAMENTE FLEXBOX PARA ALINEAR IZQUIERDA Y DERECHA */
-    .content-layout {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: flex-start;
-    }
-
-    /* COLUMNA IZQUIERDA: 3 CUADROS LARGOS DE INFORMACIÓN */
-    .left-column {
-      flex: 1 1 500px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .info-card-long {
-      background-color: var(--bg-card);
-      border-radius: 12px;
-      padding: 22px;
-      border-left: 5px solid var(--accent);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .info-card-long h3 {
-      color: var(--accent);
-      font-size: 1.2rem;
-    }
-
-    .info-card-long p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    /* COLUMNA DERECHA: 2 CUADROS PEQUEÑOS PARA FOTOS */
-    .right-column {
-      flex: 0 0 260px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .photo-card-small {
-      background-color: var(--bg-card);
-      border: 2px dashed var(--accent);
-      border-radius: 12px;
-      height: 160px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: var(--text-muted);
-      padding: 15px;
-      gap: 8px;
-    }
-
-    .photo-card-small span {
-      font-size: 0.85rem;
-    }
-
-    /* BOTONES DE NAVEGACIÓN FLEXBOX */
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 10px;
-    }
-
-    .btn {
-      background-color: var(--accent);
-      color: var(--bg-primary);
-      padding: 12px 24px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: transform 0.2s, background-color 0.2s;
-      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      background-color: #7dd3fc;
-    }
-
-    footer {
-      background-color: var(--bg-card);
-      padding: 15px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header>
-    <div class="logo">Portafolio</div>
+    <a href="index.html" class="logo">Portafolio</a>
+    <nav class="page-dots" aria-label="Indicador de página">
+      <a href="index.html" class="dot" title="Página 1: Inicio">1</a>
+      <a href="pagina2.html" class="dot active" title="Página 2: Información">2</a>
+      <a href="pagina3.html" class="dot" title="Página 3: Intereses">3</a>
+    </nav>
   </header>
 
-  <main>
+  <main class="main-wide">
     <div class="content-layout">
       
       <!-- Columna Izquierda: 3 Cuadros Largos -->
       <div class="left-column">
         
-        <article class="info-card-long">
+        <article class="info-card reveal">
           <h3>1. Formación Académica</h3>
           <p>Mi formación empezó en una escuela llamada Domingo Savio; cursé ahí hasta 6to de básica. De ahí me cambié al colegio UES (Unidad Educativa Sígsig) donde me gradué, y ahora estoy estudiando en el Instituto Sudamericano.</p>
         </article>
 
-        <article class="info-card-long">
+        <article class="info-card reveal">
           <h3>2. LORE SUPERFICIAL</h3>
           <p>Soy Joao Bautista León Delgado, tengo 20 años y nací en mi pueblo llamado Sígsig (Azuay). Mi padre se llama Juan y mi madre Nancy; tengo 2 hermanos y 1 hermana.</p>
         </article>
 
-        <article class="info-card-long">
-          <h3>3. Proyectos & Objetivos Futuros</h3>
+        <article class="info-card reveal">
+          <h3>3. Proyectos &amp; Objetivos Futuros</h3>
           <p>Me gustaría graduarme de la carrera de desarrollo de software, también me gustaría hacer la ingeniería y especializarme en ciberseguridad. Sé que es un camino largo y difícil, pero no imposible.</p>
         </article>
 
@@ -185,12 +43,12 @@
       <!-- Columna Derecha: 2 Cuadros Pequeños para Fotos -->
       <div class="right-column">
         
-        <div class="photo-card-small">
-          <img src="rex.jpg" alt="Proyecto o Código" style="width: 100%; height: 100%; object-fit: cover;"/> 
+        <div class="photo-card-small photo-zoomable reveal" data-caption="Proyecto / Código">
+          <img src="rex.jpg" alt="Proyecto o Código">
         </div>
 
-        <div class="photo-card-small">
-          <img src="montaña.jpg" alt="Espacio de Trabajo" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="photo-card-small photo-zoomable reveal" data-caption="Espacio / Paisaje">
+          <img src="montaña.jpg" alt="Espacio de Trabajo">
         </div>
 
       </div>
@@ -198,15 +56,23 @@
     </div>
 
     <!-- Navegación -->
-    <div class="nav-buttons">
+    <div class="nav-buttons reveal">
       <a href="index.html" class="btn">&larr; Anterior</a>
       <a href="pagina3.html" class="btn">Siguiente &rarr;</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 | Desarrollo de Software</p>
+    <p>&copy; <span class="current-year">2026</span> | Desarrollo de Software</p>
   </footer>
 
+  <!-- Visor Lightbox para ampliar fotos al hacer clic -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+    <img id="lightboxImg" src="" alt="Vista ampliada">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

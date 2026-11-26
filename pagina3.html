@@ -4,247 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio - Intereses y Lore Profundo</title>
-  <style>
-    :root {
-      --bg-primary: #0f172a;
-      --bg-card: #1e293b;
-      --accent: #38bdf8;
-      --text-main: #f8fafc;
-      --text-muted: #cbd5e1;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-primary);
-      color: var(--text-main);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background-color: var(--bg-card);
-      padding: 1.5rem 2.5rem;
-      border-bottom: 3px solid var(--accent);
-    }
-
-    .logo {
-      font-size: 2rem;
-      font-weight: bold;
-      color: var(--accent);
-      letter-spacing: 1px;
-    }
-
-    /* CONTENEDOR MÁS ANCHO Y GRANDE */
-    main {
-      flex: 1;
-      max-width: 1300px;
-      margin: auto;
-      padding: 40px 30px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .content-layout {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 35px;
-      align-items: stretch;
-    }
-
-    /* COLUMNA IZQUIERDA MÁS GRANDE */
-    .left-column {
-      flex: 1 1 650px;
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-
-    .info-card-large {
-      background-color: var(--bg-card);
-      border-radius: 16px;
-      padding: 30px;
-      border-left: 8px solid var(--accent);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .info-card-large h3 {
-      color: var(--accent);
-      font-size: 1.6rem;
-    }
-
-    .info-card-large p {
-      color: var(--text-muted);
-      font-size: 1.15rem;
-      line-height: 1.7;
-    }
-
-    /* COLUMNA DERECHA MÁS GRANDE */
-    .right-column {
-      flex: 0 0 380px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .section-title-right {
-      color: var(--accent);
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-
-    .photos-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    /* CUADROS DE FOTOS AMPLIADOS */
-    .photo-card-mini {
-      background-color: var(--bg-card);
-      border: 3px dashed var(--accent);
-      border-radius: 14px;
-      flex: 1 1 calc(50% - 10px);
-      height: 160px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: var(--text-main);
-      padding: 15px;
-      gap: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .photo-card-mini span {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    /* BOTONES DE NAVEGACIÓN MÁS GRANDES */
-    .nav-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-
-    .btn {
-      background-color: var(--accent);
-      color: var(--bg-primary);
-      padding: 15px 32px;
-      border-radius: 35px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: transform 0.2s, background-color 0.2s;
-      box-shadow: 0 6px 15px rgba(56, 189, 248, 0.3);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      background-color: #7dd3fc;
-    }
-
-    footer {
-      background-color: var(--bg-card);
-      padding: 20px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 1rem;
-      border-top: 2px solid rgba(255, 255, 255, 0.05);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header>
-    <div class="logo">Portafolio</div>
+    <a href="index.html" class="logo">Portafolio</a>
+    <nav class="page-dots" aria-label="Indicador de página">
+      <a href="index.html" class="dot" title="Página 1: Inicio">1</a>
+      <a href="pagina2.html" class="dot" title="Página 2: Información">2</a>
+      <a href="pagina3.html" class="dot active" title="Página 3: Intereses">3</a>
+    </nav>
   </header>
 
-  <main>
-    <div class="content-layout">
+  <main class="main-xl">
+    <div class="content-layout stretch">
       
       <!-- Columna Izquierda: Cuadros Grandes -->
-      <div class="left-column">
+      <div class="left-column-lg">
         
-        <article class="info-card-large">
+        <article class="info-card large reveal">
           <h3>1. Lore Profundo</h3>
           <p>Soy alguien bastante sociable y realista. Siempre soy positivo con los demás porque nunca sabemos por lo que están pasando; a veces soy depresivo, pero no dejo que eso afecte a los demás. Muchos tenemos un crecimiento y una formación bastante profunda, pero eso es lo que nos ha formado. El camino siempre tendrá un final, así sea bueno o malo.</p>
         </article>
 
-        <article class="info-card-large">
+        <article class="info-card large reveal">
           <h3>2. Pasatiempos, Ocupaciones y Gustos</h3>
           <p>En mis tiempos libres me gusta comer, jugar videojuegos, ver series o películas, y salir. Muchas veces me pongo reflexivo o filosófico. También me encanta el fútbol, soy del FC Barcelona y sigo la UFC; además, veo y leo animes y mangas.</p>
+          <div class="interest-tags">
+            <span class="tag-pill" data-target="foto-juegos">🎮 Videojuegos</span>
+            <span class="tag-pill" data-target="foto-anime">🎌 Anime y Manga</span>
+            <span class="tag-pill" data-target="foto-futbol">⚽ FC Barcelona &amp; UFC</span>
+            <span class="tag-pill" data-target="foto-series">🎬 Series y Películas</span>
+          </div>
         </article>
 
       </div>
 
       <!-- Columna Derecha: Galería de Fotos Grande -->
-      <div class="right-column">
+      <div class="right-column-lg reveal">
         <h3 class="section-title-right">Galería de Intereses</h3>
         
         <div class="photos-grid">
-          <div class="photo-card-mini">
-          <img src="link.jpg" alt="Videojuegos" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+          <div class="photo-card-mini photo-zoomable" id="foto-juegos" data-caption="Videojuegos">
+            <img src="link.jpg" alt="Videojuegos">
           </div>
-          <div class="photo-card-mini">
-          <img src="luci.jpg" alt="Anime" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+          <div class="photo-card-mini photo-zoomable" id="foto-anime" data-caption="Anime y Manga">
+            <img src="luci.jpg" alt="Anime">
           </div>
-          <div class="photo-card-mini">
-            <img src="messi.jpg" alt="Fútbol" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+          <div class="photo-card-mini photo-zoomable" id="foto-futbol" data-caption="Fútbol - FC Barcelona">
+            <img src="messi.jpg" alt="Fútbol">
           </div>
-          <div class="photo-card-mini">
-            <img src="marvel.jpg" alt="Series y Pelis" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+          <div class="photo-card-mini photo-zoomable" id="foto-series" data-caption="Series y Películas">
+            <img src="marvel.jpg" alt="Series y Pelis">
           </div>
         </div>
-
       </div>
 
     </div>
 
     <!-- Navegación -->
-    <div class="nav-buttons">
+    <div class="nav-buttons reveal">
       <a href="pagina2.html" class="btn">&larr; Anterior</a>
-      <a href="index.html" class="btn">Inicio &orarr;</a>
+      <a href="index.html" class="btn">Inicio &#8634;</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2026| Desarrollo de Software</p>
+    <p>&copy; <span class="current-year">2026</span> | Desarrollo de Software</p>
   </footer>
 
+  <!-- Visor Lightbox para ampliar fotos al hacer clic -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+    <img id="lightboxImg" src="" alt="Vista ampliada">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
